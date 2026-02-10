@@ -32,6 +32,25 @@ header h1 {
     letter-spacing: 2px;
 }
 
+.btn-voltar {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff33; 
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #ffffff55;
+}
+
 /* Conteúdo Principal */
 main {
     max-width: 1100px;
