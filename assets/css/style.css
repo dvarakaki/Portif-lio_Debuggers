@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, #2e1065 0%, #0f051d 100%);
+    color: #f5f3ff;
+    font-family: 'Staatliches', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 4.5rem;
+    color: #a855f7;
+    text-shadow: 4px 4px 0px #4c1d95, 8px 8px 0px #000;
+    letter-spacing: 5px;
+}
+
+/* Container do Menu */
+#menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+    width: 100%;
+    max-width: 1400px;
+    flex-wrap: nowrap;
+}
+
+#menu li {
+    flex: 1;
+    max-width: 250px;
+}
+
+/* Estilização Base (Retas por padrão) */
+#menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #f5f3ff;
+    font-size: 1.8rem;
+    height: 160px;    
+    background: #5b21b6;
+    border: 6px solid #7c3aed;
+    border-radius: 15px;
+    position: relative;
+    /* Transição suave para a rotação e escala */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 0 #2e1065, 0 15px 20px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 0px #000;
+    text-align: center;
+    padding: 15px;
+    transform: rotate(0deg); /* Começam retinhas */
+}
+
+/* EFEITO HOVER: Entortando ao passar o mouse */
+/* Itens ímpares entortam para a esquerda */
+#menu li:nth-child(odd) a:hover {
+    transform: scale(1.15) rotate(-5deg);
+    background: #d946ef;
+    z-index: 10;
+}
+
+/* Itens pares entortam para a direita */
+#menu li:nth-child(even) a:hover {
+    transform: scale(1.15) rotate(5deg);
+    background: #d946ef;
+    z-index: 10;
+}
+
+/* Estilo extra no hover para todos */
+#menu li a:hover {
+    border-color: #f0abfc;
+    box-shadow: 0 5px 0 #701a75, 0 15px 30px rgba(217, 70, 239, 0.4);
+}
+
+/* Ícone de dinossauro */
+#menu li a::before {
+    content: '🦖';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    opacity: 0.4;
+}
+
+main {
+    margin-top: 60px;
+    text-align: center;
+}
+
+main p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: 3px dashed #a855f7;
+    color: #c084fc;
+    font-size: 1.8rem;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    #menu { flex-wrap: wrap; }
+    #menu li { min-width: 180px; }
+    h1 { font-size: 3rem; }
+}
