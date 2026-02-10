@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <style>
+      :root { --pink: #FF2AA3; }
+      .icon { fill: none; stroke: var(--pink); stroke-width: 18; stroke-linecap: round; }
+      .play { fill: var(--pink); }
+      .wordmark { fill: var(--pink); font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif; letter-spacing: 1px; }
+      .title { font-weight: 600; font-size: 88px; }
+      .subtitle { font-weight: 700; font-size: 120px; }
+    </style>
+  </defs>
+
+  <!-- Icon: abstract hour + play (refined circular sweep with a gap at 6 o'clock) -->
+  <g transform="translate(450,170)">
+    <!-- circular sweep -->
+    <path class="icon" d="
+      M 0,-110
+      A 110,110 0 1 1 -25,104
+    "/>
+    <!-- tapered tail suggesting 'hora' tick -->
+    <path class="icon" d="M -25,104 Q 0,118 20,92"/>
+    <!-- play triangle -->
+    <path class="play" d="M -24,-42 L 62,0 L -24,42 Z" />
+  </g>
+
+  <!-- Wordmark -->
+  <g text-anchor="middle">
+    <text x="450" y="360" class="wordmark title">PRADHORA</text>
+    <text x="450" y="485" class="wordmark subtitle">FLIX</text>
+  </g>
+</svg>
