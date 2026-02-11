@@ -7,7 +7,7 @@ O projeto foi desenvolvido por:
 
 * **Lorraine Frontelli**
 * **Davi Arakaki**
-* **Felipe Kogaki**
+* **Felipe Kogake**
 * **Eduardo Passos**
 * **João Prado**
 
